@@ -1,0 +1,74 @@
+<!-- rosebreastedgrosbeak.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Rose-breasted Grosbeak</title>
+</head>
+<body>
+    <h1>Rose-breasted Grosbeak</h1>
+    <img src="ImagesBirds/Rose Breasted Grosbeak.jpg" alt="Imagen del Rose-breasted Grosbeak" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al colorido Rose-breasted Grosbeak!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, hogar de aves asombrosas como el Rose-breasted Grosbeak!</li>
+            <li>¿Sabías que los Rose-breasted Grosbeaks son aves cantoras y tienen un colorido pecho rojo como una rosa? ¡Son tan hermosos como melodiosos! 🌹🎶</li>
+            <li>Su nombre científico es Pheucticus ludovicianus, pero puedes llamarlos "Rose-breasted Grosbeaks". ¡Un nombre que combina elegancia y grandeza!</li>
+            <li>Estos encantadores pájaros no son nativos de Galápagos, pero ocasionalmente se han avistado durante sus viajes migratorios. ¡Mira hacia los cielos y podrías tener la suerte de ver uno!</li>
+            <li>Recuerda siempre respetar la naturaleza y disfrutar de estas bellezas aladas desde una distancia segura. ¡Que tengas una exploración maravillosa!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Rose-breasted Grosbeak!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la diversidad de aves incluye al magnífico Rose-breasted Grosbeak!</li>
+            <li>Nombre Científico: Pheucticus ludovicianus</li>
+            <li>¿Sabías que los Rose-breasted Grosbeaks son reconocidos por su plumaje vibrante, especialmente el distintivo parche rojo en sus pechos?</li>
+            <li>Estado de Conservación: Varía, pero generalmente de preocupación menor. Su belleza y canto los hacen populares entre los observadores de aves.</li>
+            <li>¿Dónde verlos? Aunque no son residentes permanentes, a veces se pueden avistar durante la migración en las Islas Galápagos.</li>
+            <li>¡Curiosidad turística! Los Rose-breasted Grosbeaks son conocidos por sus melodiosos cantos, y los machos exhiben su vistoso pecho durante la temporada de reproducción.</li>
+            <li>Recuerda ser un observador responsable y disfrutar de la maravilla de la naturaleza sin perturbarla. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Pheucticus ludovicianus</li>
+            <li>Estado de Conservación: Varía, pero generalmente de preocupación menor</li>
+            <li>Distribución Geográfica: Amplia distribución en América del Norte, migratorio en Galápagos</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico atribuido a diferentes naturalistas, incluyendo a Linnaeus.</li>
+            <li>Hábitat: Bosques, áreas arboladas, zonas de matorrales durante la migración</li>
+            <li>Origen: No nativo de Galápagos, ocasionalmente avistado durante migraciones</li>
+            <li>Presencia en el Hábitat: Variable, migratorio en Galápagos</li>
+            <li>Dieta: Principalmente semillas, insectos y frutas durante la temporada de reproducción</li>
+            <li>Peso: Alrededor de 40-50 gramos</li>
+            <li>Comportamiento Reproductivo: Construyen nidos en ramas bajas, la hembra pone huevos de color verde pálido</li>
+            <li>Adaptaciones: Pico robusto adaptado para alimentarse de semillas y frutas</li>
+            <li>Interacciones con Ecosistema: Contribuyen a la dispersión de semillas y control de poblaciones de insectos</li>
+            <li>Nombres Relacionados: Grosbeak de Pecho Rosado</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

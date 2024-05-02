@@ -1,0 +1,74 @@
+<!-- blueheron.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre la Blue Heron</title>
+</head>
+<body>
+    <h1>Blue Heron</h1>
+    <img src="ImagesBirds/Blue Heron.jpg" alt="Imagen de la Blue Heron" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre a la majestuosa Blue Heron!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la Blue Heron es una hermosa ave costera!</li>
+            <li>¿Sabías que la Blue Heron es conocida por su elegante plumaje azul y su largo cuello? ¡Como un modelo de moda en el mundo aviar! 🌊🦢</li>
+            <li>Su nombre científico es Ardea herodias, pero puedes llamarla "Blue Heron". ¡Un nombre que refleja su belleza natural!</li>
+            <li>Puedes encontrarlas cerca de cuerpos de agua, observando con gracia mientras buscan su próxima comida.</li>
+            <li>Recuerda respetar la tranquilidad de estos ambientes y disfrutar de la maravilla de la naturaleza. ¡Esperamos que tengas un día lleno de exploración!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre a la Blue Heron!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, hogar de la elegante Blue Heron, una de las aves más hermosas de la costa!</li>
+            <li>Nombre Científico: Ardea herodias</li>
+            <li>¿Sabías que la Blue Heron es conocida por su distintivo plumaje azul y su habilidad para pescar con estilo? ¡Una joya costera que no querrás perderte!</li>
+            <li>Estado de Conservación: Preocupación menor. Su adaptabilidad y amplia distribución contribuyen a su estabilidad poblacional.</li>
+            <li>¿Dónde verlas? Busca la Blue Heron cerca de áreas acuáticas, como estuarios y playas. ¡Su presencia es una delicia para los amantes de las aves!</li>
+            <li>¡Curiosidad turística! La Blue Heron puede permanecer inmóvil durante la caza, esperando pacientemente a que los peces se acerquen. ¡Un espectáculo de habilidad y paciencia!</li>
+            <li>Recuerda disfrutar de la observación de aves de manera responsable, respetando su entorno natural. ¡Que tengas un viaje maravilloso!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Ardea herodias</li>
+            <li>Estado de Conservación: Preocupación menor</li>
+            <li>Distribución Geográfica: Amplia distribución en América del Norte y América Central; avistamientos en Galápagos pueden ser raros</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico Ardea herodias refleja su clasificación dentro del género Ardea y su relación con la familia Herodias. Nomenclatura atribuida por Linnaeus.</li>
+            <li>Hábitat: Varía, pero suele encontrarse en áreas acuáticas, como lagos, ríos y estuarios</li>
+            <li>Origen: Nativo en América del Norte y América Central; avistamientos en Galápagos pueden ser resultado de vagabundeo</li>
+            <li>Presencia en el Hábitat: Puede ser rara en Galápagos</li>
+            <li>Dieta: Peces, crustáceos, pequeños mamíferos acuáticos</li>
+            <li>Peso: Alrededor de 2.5 kg (puede variar según la región)</li>
+            <li>Comportamiento de Caza: Utiliza su largo pico para capturar presas con precisión; puede permanecer inmóvil durante largos periodos antes de atacar</li>
+            <li>Anidación: Construyen nidos en árboles o arbustos cerca del agua</li>
+            <li>Biodiversidad: Contribuye a la regulación de poblaciones de peces y crustáceos, desempeñando un papel importante en los ecosistemas acuáticos</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

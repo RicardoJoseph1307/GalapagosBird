@@ -1,0 +1,74 @@
+<!-- frigate.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Frigate</title>
+</head>
+<body>
+    <h1>Frigate</h1>
+    <img src="ImagesBirds/Frigate.jpg" alt="Imagen del Frigate" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al increíble Frigate!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde el Frigate destaca con sus impresionantes alas!</li>
+            <li>¿Sabías que los Frigates son conocidos por sus alas grandes y sus habilidades de vuelo asombrosas? ¡Como aviones acrobáticos en el cielo! 🛩️🐦</li>
+            <li>Su nombre científico es Fregata, pero puedes llamarlos simplemente "Frigates". ¡Un nombre que suena tan elegante como ellos vuelan!</li>
+            <li>Les encanta volar alto y nadar en el océano, ¡así que puedes verlos desde tierra o mar!</li>
+            <li>Recuerda admirarlos desde lejos y disfrutar de su majestuosidad. ¡Que tengas un encuentro mágico con estos maravillosos voladores!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Frigate!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, hogar de los fascinantes Frigates con sus impresionantes vuelos!</li>
+            <li>Nombre Científico: Fregata</li>
+            <li>¿Sabías que los Frigates son famosos por sus vuelos acrobáticos y sus alas largas? ¡Una verdadera maravilla aérea!</li>
+            <li>Estado de Conservación: Varía según la especie, algunas están clasificadas como preocupación menor.</li>
+            <li>¿Dónde verlos? Puedes avistar Frigates desde tierra o mar, especialmente durante sus vuelos de cortejo.</li>
+            <li>¡Curiosidad turística! Los machos inflan sus gargantas rojas para atraer a las hembras durante la temporada de apareamiento. ¡Un espectáculo natural impresionante!</li>
+            <li>Recuerda ser respetuoso con su entorno y disfrutar de su belleza desde una distancia segura. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Fregata</li>
+            <li>Estado de Conservación: Varía según la especie, algunas especies están clasificadas como preocupación menor, mientras que otras están en la categoría de casi amenazadas.</li>
+            <li>Distribución Geográfica: Amplia distribución en océanos tropicales y subtropicales, incluyendo las Islas Galápagos.</li>
+            <li>Descubrimiento y Nomenclatura: El género Fregata incluye varias especies. El nombre científico deriva del latín "Frigates" que significa rápido o ágil.</li>
+            <li>Hábitat: Oceánico, costero. Pueden pasar largos períodos en vuelo y descansar en el agua.</li>
+            <li>Origen: Nativo</li>
+            <li>Presencia en el Hábitat: Común, especialmente cerca de áreas con presencia de presas marinas.</li>
+            <li>Dieta: Principalmente peces, calamares y otras presas marinas.</li>
+            <li>Peso: Varía según la especie, generalmente alrededor de 1-1.5 kg.</li>
+            <li>Comportamiento de Anidación: Construyen nidos en árboles o arbustos en colonias, con ciertas especies exhibiendo rituales de cortejo elaborados.</li>
+            <li>Curiosidades Biológicas: Los machos de algunas especies inflan sus gargantas rojas durante la temporada de apareamiento para atraer a las hembras.</li>
+            <li>Interacción con el Ecosistema: Contribuyen al equilibrio ecológico al controlar las poblaciones de peces y calamares en sus áreas de distribución.</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos.</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

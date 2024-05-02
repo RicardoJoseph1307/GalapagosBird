@@ -1,0 +1,74 @@
+<!-- beltedkingfisher.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Belted Kingfisher</title>
+</head>
+<body>
+    <h1>Belted Kingfisher</h1>
+    <img src="ImagesBirds/Belted Kingfisher.jpg" alt="Imagen del Belted Kingfisher" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al asombroso Belted Kingfisher!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde el Belted Kingfisher es un experto pescador!</li>
+            <li>¿Sabías que el Belted Kingfisher tiene una corona distintiva y le encanta lanzarse en picado para atrapar peces? ¡Es como un superhéroe de las aguas! 🐟🦸‍♂️</li>
+            <li>Su nombre científico es Megaceryle alcyon, pero puedes llamarlo "Belted Kingfisher". ¡Un nombre que refleja su habilidad para pescar en aguas dulces!</li>
+            <li>Puedes verlos cerca de cuerpos de agua, así que mantén tus ojos abiertos durante tus aventuras en las Galápagos.</li>
+            <li>Recuerda cuidar los entornos acuáticos y disfrutar de la magia de la naturaleza. ¡Esperamos que tengas un día lleno de descubrimientos!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Belted Kingfisher!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la diversidad de aves incluye al hábil pescador, el Belted Kingfisher!</li>
+            <li>Nombre Científico: Megaceryle alcyon</li>
+            <li>¿Sabías que el Belted Kingfisher es conocido por su distintiva corona y su capacidad para atrapar peces lanzándose en picado?</li>
+            <li>Estado de Conservación: Preocupación menor. Su habilidad para adaptarse a diferentes entornos le ha permitido prosperar.</li>
+            <li>¿Dónde verlo? Busca al Belted Kingfisher cerca de ríos, lagos o la costa, ¡son expertos pescadores!</li>
+            <li>¡Curiosidad turística! El Belted Kingfisher es territorial y a menudo anuncia su presencia con un distintivo "clic-clic". ¡Una experiencia auditiva única en Galápagos!</li>
+            <li>Recuerda disfrutar de la observación de aves de manera responsable, manteniendo una distancia respetuosa. ¡Disfruta tu exploración!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Megaceryle alcyon</li>
+            <li>Estado de Conservación: Preocupación menor</li>
+            <li>Distribución Geográfica: Amplia distribución en América del Norte y América Central; migratorio en Galápagos</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico Megaceryle alcyon refleja sus características físicas y su hábito de pescar. Nomenclatura atribuida por Linnaeus.</li>
+            <li>Hábitat: Áreas acuáticas, como ríos, lagos, y zonas costeras. Puede adaptarse a hábitats variados.</li>
+            <li>Origen: Nativo, con poblaciones migratorias en Galápagos</li>
+            <li>Presencia en el Hábitat: Común en áreas acuáticas</li>
+            <li>Dieta: Peces, insectos acuáticos, pequeños crustáceos</li>
+            <li>Peso: Alrededor de 140 g</li>
+            <li>Reproducción: Excava nidos en barrancos o taludes cerca del agua</li>
+            <li>Comportamiento de Alimentación: Lanzamiento en picado para atrapar presas</li>
+            <li>Interacciones Ecológicas: Importante para controlar poblaciones de peces en hábitats acuáticos</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

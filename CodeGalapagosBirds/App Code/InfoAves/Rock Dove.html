@@ -1,0 +1,76 @@
+<!-- rockdove.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre la Paloma Doméstica</title>
+</head>
+<body>
+    <h1>Paloma Doméstica</h1>
+    <img src="ImagesBirds/Rock Dove.jpg" alt="Imagen de la Paloma Doméstica" width="300" height="200">
+    
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Hola amiguito!</h2>
+        <ul>
+            <li>¡Descubre a las amigables palomas, también conocidas como palomas domésticas!</li>
+            <li>Su nombre científico es Columba livia, pero podemos llamarlas "palomas de la ciudad".</li>
+            <li>Las palomas están en todas partes, ¡incluso en las plazas y parques donde juegas!</li>
+            <li>¡A veces son de colores diferentes y pueden hacer trucos divertidos!</li>
+            <li>¡Sorpresa! En las Islas Galápagos, las palomas domésticas son consideradas una plaga y se está trabajando para erradicarlas.</li>
+            <li>Las palomas no son solo para mirar, ¡puedes darles migas de pan y serán tus amigas!</li>
+            <li>¡Espero que disfrutes aprendiendo sobre estas simpáticas aves! 🕊️</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Explora el Mundo de las Palomas Domésticas!</h2>
+        <ul>
+            <li>¡Bienvenido a la ciudad, donde las palomas domésticas son parte de la vida diaria!</li>
+            <li>Nombre Científico: Columba livia</li>
+            <li>¿Sabías que las palomas pueden venir en diferentes colores y patrones?</li>
+            <li>Las palomas se adaptan bien a vivir cerca de los humanos, ¡las verás en plazas y calles de la ciudad!</li>
+            <li>Curiosidad turística: Las palomas tienen un sentido increíble de orientación y a menudo regresan a su hogar desde largas distancias.</li>
+            <li>¡No olvides disfrutar de su compañía y quizás compartir algunas migas de pan!</li>
+            <li>En las Islas Galápagos, las palomas domésticas son consideradas una plaga y se está trabajando para erradicarlas. ¡Ayuda a preservar el equilibrio natural!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Columba livia</li>
+            <li>Estado de Conservación: No evaluable (domesticada)</li>
+            <li>Distribución Geográfica: Ubicua en entornos urbanos y suburbanos en todo el mundo</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico es "Columba livia". Su domesticación se remonta a la antigüedad.</li>
+            <li>Hábitat: Principalmente entornos urbanos y rocosos</li>
+            <li>Origen: Nativa de Europa, pero domesticada y distribuida globalmente</li>
+            <li>Presencia en el Hábitat: Muy común en áreas urbanas</li>
+            <li>Dieta: Generalmente granívora, se alimenta de granos y migas de pan</li>
+            <li>Peso: Alrededor de 238-380 gramos</li>
+            <li>Comportamiento: Adaptada a la convivencia con humanos, con fuertes habilidades de vuelo y orientación</li>
+            <li>Reproducción: Pueden reproducirse durante todo el año en entornos urbanos</li>
+            <li>Interacción con Humanos: Vistas como plagas urbanas por algunos, pero también apreciadas por su cercanía y simplicidad</li>
+            <li>En las Islas Galápagos, las palomas domésticas son consideradas una plaga y se está trabajando para erradicarlas. Contribuye a la preservación del equilibrio natural.</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

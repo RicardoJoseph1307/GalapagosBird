@@ -1,0 +1,81 @@
+<!-- albatross.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Albatros</title>
+</head>
+<body>
+    <h1>Albatross</h1>
+    <img src="ImagesBirds/Albatross.jpg" alt="Imagen del Albatros" width="300" height="200">
+
+
+    <!-- Sección para niños con imagen de fondo -->
+    <div id="info-nino" style="display: none; background-image: url('InfoNiños/Albatros fondo.jpg'); background-size: cover; padding: 20px; border-radius: 15px;">
+        <h2 style="color: #ff6b6b; font-size: 24px;">¡Descubre a los hermosos Albatross!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, hogar de los majestuosos albatros!</li>
+            <img src="InfoNiños/Albatros Comiendo.jpeg" alt="Ave Albatros Comiendo" style="width: 150px; height: 100px;"><br>
+            <li>¿Sabías que los albatros son pájaros increíbles que pueden volar muy, muy lejos sin cansarse? ¡Como superhéroes del cielo! 🌊🐦</li>
+            <img src="InfoNiños/Albatros Volando.jpeg" alt="Ave Albatros Volando" style="width: 150px; height: 100px;"><br>
+            <li>Su nombre científico es Diomedea exulans, pero puedes llamarlos "albatros errantes". ¡Un nombre divertido, verdad?</li>
+            <li>Viven en los océanos, y a veces los encuentras en las Islas Galápagos, ¡especialmente en la Isla Española! 🏝️</li>
+            <li>¡Sorpresa! Los albatros son muy románticos, siempre están con la misma pareja. ¡Un amor que dura toda la vida!</li>
+            <img src="InfoNiños/Albatros Cortejando.jpeg" alt="Ave Albatros Reproduciéndose" style="width: 150px; height: 100px;"><br>
+            <li>Están en peligro, así que todos debemos cuidarlos y respetar su espacio. ¡Así podemos seguir viéndolos por mucho tiempo más!</li>
+            <li>¡Espero que te haya gustado conocer a estos increíbles voladores! 🌈</li>
+            <img src="InfoNiños/Albatro con crias.jpeg" alt="Ave Albatros con Crías" style="width: 150px; height: 100px;"><br>
+        </ul>
+    </div>
+
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre a los Albatros!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, hogar de los majestuosos albatros!</li>
+            <li>Nombre Científico: Diomedea exulans (albatros errante)</li>
+            <li>¿Sabías que los albatros son como los superhéroes del cielo? Pueden volar enormes distancias sin parar, ¡una maravilla de la naturaleza!</li>
+            <li>Estado de Conservación: ¡Son tan especiales que están clasificados como vulnerables, así que cuidémoslos juntos!</li>
+            <li>¿Dónde verlos? En la Isla Española son las estrellas del espectáculo, especialmente durante la temporada de anidación.</li>
+            <li>¡Curiosidad turística! Los albatros son monógamos, ¡lo cual significa que eligen a una sola pareja y comparten su amor durante toda su vida! ¡Imagina presenciar este hermoso vínculo alado mientras exploras las Islas Galápagos!</li>
+            <li>Recuerda disfrutar desde una distancia respetuosa para no interrumpir sus actividades diarias. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Diomedea exulans (albatros errante)</li>
+            <li>Estado de Conservación: Vulnerable</li>
+            <li>Distribución Geográfica: Amplia distribución en océanos, incluyendo las Galápagos (común en Española)</li>
+            <li>Hábitat: Oceánico, costero</li>
+            <li>Origen: Nativa</li>
+            <li>Presencia en el Hábitat: Común</li>
+            <li>Dieta: Mayormente se alimentan de peces y calamares</li>
+            <li>Peso: Alrededor de 8 kg (puede variar según la región)</li>
+            <li>Anidación: Principalmente en la Isla Española</li>
+            <li>Cambios y Evolución: Impactado por el cambio climático; evolución a largo plazo afectada</li>
+            <li>Biodiversidad: Crucial para la biodiversidad marina, aporta nutrientes mediante excremento</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

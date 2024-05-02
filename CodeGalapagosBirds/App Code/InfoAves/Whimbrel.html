@@ -1,0 +1,73 @@
+<!-- whimbrel.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Whimbrel</title>
+</head>
+<body>
+    <h1>Whimbrel</h1>
+    <img src="ImagesBirds/Whimbrel.jpg" alt="Imagen del Whimbrel" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al increíble Whimbrel!</h2>
+        <ul>
+            <li>¡Hola amiguito! El Whimbrel es un ave playera que a veces visita las mágicas Islas Galápagos.</li>
+            <li>Su nombre científico es Numenius phaeopus, ¡un nombre curioso para un pájaro fascinante!</li>
+            <li>Le encanta explorar las playas en busca de pequeños animales enterrados en la arena. ¡Es todo un detective del litoral!</li>
+            <li>Aunque no sea tan colorido como otros pájaros, su largo pico curvado es su herramienta especial para encontrar comida.</li>
+            <li>¡Cuida y respeta su hábitat para que siempre podamos disfrutar de la belleza natural de Galápagos!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Whimbrel en Galápagos!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde puedes encontrar al fascinante Whimbrel en tus paseos por la playa!</li>
+            <li>Nombre Científico: Numenius phaeopus</li>
+            <li>Aunque su plumaje no sea llamativo, su largo pico curvado es su distintivo. Búscalo en las playas galapagueñas durante tus caminatas costeras.</li>
+            <li>Estado de Conservación: No amenazado. Asegúrate de disfrutar de su presencia respetando su espacio en la playa.</li>
+            <li>¿Sabías que estos pájaros son como detectives de la costa, usando sus picos largos para buscar insectos y pequeños animales enterrados?</li>
+            <li>Observa con atención y aprecia la maravilla de la naturaleza en Galápagos. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos sobre el Whimbrel en Galápagos:</h2>
+        <ul>
+            <li>Nombre Científico: Numenius phaeopus</li>
+            <li>Estado de Conservación: No amenazado</li>
+            <li>Distribución Geográfica: Costas y playas en varias regiones del mundo, migratorio en amplias áreas. Visitante ocasional en las Islas Galápagos.</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico Numenius phaeopus ha sido utilizado por naturalistas para describir al Whimbrel.</li>
+            <li>Hábitat: Costas, playas, áreas intermareales. Ocasionalmente presente en Galápagos durante sus migraciones.</li>
+            <li>Origen: Nativo, pero su presencia en Galápagos es ocasional, ya que migra a través de la región.</li>
+            <li>Presencia en el Hábitat: Regular durante las migraciones.</li>
+            <li>Dieta: Insectos, gusanos y pequeños animales que encuentra en las áreas costeras.</li>
+            <li>Pico Especializado: El pico largo y curvado le permite buscar alimento enterrado en la arena.</li>
+            <li>Comportamiento de Migración: Realiza migraciones largas entre sus áreas de reproducción y sus áreas de invernada.</li>
+            <li>Interacciones Ecológicas: Contribuye al equilibrio de las poblaciones de insectos en las áreas que visita.</li>
+            <li>Curiosidades Biológicas: Aunque no destaca por su plumaje, su pico especializado lo convierte en un experto cazador en las costas.</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos.</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

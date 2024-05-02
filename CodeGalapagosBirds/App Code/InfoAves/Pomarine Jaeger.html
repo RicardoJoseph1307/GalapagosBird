@@ -1,0 +1,74 @@
+<!-- pomarinejaeger.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Pomarine Jaeger</title>
+</head>
+<body>
+    <h1>Pomarine Jaeger</h1>
+    <img src="ImagesBirds/Pomarine Jaeger.jpg" alt="Imagen del Pomarine Jaeger" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al valiente Pomarine Jaeger!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, hogar de aves asombrosas como el Pomarine Jaeger!</li>
+            <li>¿Sabías que el Pomarine Jaeger es un maestro en la captura de peces y roba comida de otras aves? ¡Como un hábil pirata del cielo! 🐟🏴‍☠️</li>
+            <li>Su nombre científico es Stercorarius pomarinus, pero puedes llamarlo "Pomarine Jaeger". ¡Un nombre que refleja su comportamiento audaz!</li>
+            <li>Aunque no es nativo, a veces se ha avistado durante sus migraciones. ¡Mira hacia el cielo y podrías tener la suerte de verlo!</li>
+            <li>Recuerda ser un observador respetuoso y disfrutar de la maravilla de la naturaleza desde una distancia segura. ¡Que tengas un día lleno de exploración!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Pomarine Jaeger!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la diversidad de aves incluye al valiente Pomarine Jaeger!</li>
+            <li>Nombre Científico: Stercorarius pomarinus</li>
+            <li>¿Sabías que el Pomarine Jaeger es un hábil depredador que se especializa en la caza de peces y también roba comida de otras aves marinas?</li>
+            <li>Estado de Conservación: Preocupación menor. Su comportamiento astuto le ha conferido éxito en diferentes hábitats.</li>
+            <li>¿Dónde verlo? Aunque no es residente, a veces se avista durante sus migraciones en las Islas Galápagos.</li>
+            <li>¡Curiosidad turística! El Pomarine Jaeger es conocido por su comportamiento pirata, robando presas de otras aves en vuelo. ¡Una exhibición impresionante de habilidad de vuelo!</li>
+            <li>Recuerda disfrutar de la observación de aves de manera ética y sin interferir en su entorno natural. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Stercorarius pomarinus</li>
+            <li>Estado de Conservación: Preocupación menor</li>
+            <li>Distribución Geográfica: Amplia distribución en regiones árticas y subárticas, migratorio en Galápagos</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico atribuido a diferentes naturalistas, destaca su comportamiento de depredación audaz.</li>
+            <li>Hábitat: Zonas árticas y subárticas durante la temporada de reproducción, migratorio en Galápagos</li>
+            <li>Origen: No nativo de Galápagos, migratorio ocasional</li>
+            <li>Presencia en el Hábitat: Variable, migratorio en Galápagos</li>
+            <li>Dieta: Carnívoro, se alimenta principalmente de peces y roba comida de otras aves marinas</li>
+            <li>Peso: Alrededor de 600-800 gramos</li>
+            <li>Comportamiento Reproductivo: Anida en el suelo en colonias dispersas, puesta de huevos en el verano ártico</li>
+            <li>Adaptaciones: Comportamiento de caza especializado, vuelo ágil</li>
+            <li>Interacciones con Ecosistema: Controla poblaciones de peces y aves marinas, impacta la dinámica trófica</li>
+            <li>Nombres Relacionados: Stercorarius, Jaeger Pomarino</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

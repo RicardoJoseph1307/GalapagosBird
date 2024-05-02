@@ -1,0 +1,73 @@
+<!-- osprey.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Osprey</title>
+</head>
+<body>
+    <h1>Osprey</h1>
+    <img src="ImagesBirds/Osprey.jpg" alt="Imagen del Osprey" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al asombroso Osprey!</h2>
+        <ul>
+            <li>¡Bienvenido al mundo del Osprey, un experto pescador del cielo!</li>
+            <li>Su nombre científico es Pandion haliaetus, pero puedes llamarlos "Ospreys". ¡Un nombre único y genial, verdad?</li>
+            <li>Los Ospreys viven cerca del agua y son conocidos por atrapar peces con sus garras afiladas. ¡Son como los superhéroes de la pesca! 🎣🦅</li>
+            <li>Aunque no son nativos de las Islas Galápagos, podrías tener la suerte de avistarlos durante sus migraciones. ¡Imagina ver a este maestro pescador en acción!</li>
+            <li>¡Sorpresa! Los Ospreys construyen nidos gigantes en lugares altos, ¡como sus propias casas en los árboles!</li>
+            <li>Es esencial proteger a los Ospreys y su hábitat para que todos podamos disfrutar de su majestuosidad. ¡Disfruta explorando el mundo de estas aves fascinantes!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Osprey!</h2>
+        <ul>
+            <li>¡Bienvenido al mundo del Osprey, un experto pescador del cielo!</li>
+            <li>Nombre Científico: Pandion haliaetus (Osprey)</li>
+            <li>Los Ospreys son aves impresionantes que se especializan en la pesca, ¡pueden sumergirse y atrapar peces con sus garras afiladas!</li>
+            <li>Estado de Conservación: No en peligro, pero es crucial respetar su entorno y disfrutar de su belleza de manera responsable.</li>
+            <li>¿Dónde verlos? Aunque no son nativos de las Islas Galápagos, podrías avistarlos durante sus migraciones, especialmente cerca de cuerpos de agua.</li>
+            <li>¡Curiosidad turística! Los Ospreys son maestros constructores de nidos, ¡imagina ver sus nidos gigantes en lo alto de los árboles o postes!</li>
+            <li>Recuerda mantener una distancia segura para no perturbar a estas aves mientras realizan sus actividades diarias. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Pandion haliaetus (Osprey)</li>
+            <li>Estado de Conservación: Preocupación Menor</li>
+            <li>Distribución Geográfica: Amplia distribución global, migratorio; no nativo de las Islas Galápagos</li>
+            <li>Hábitat: Cerca de cuerpos de agua, costas marinas</li>
+            <li>Origen: No nativo de las Islas Galápagos; podrían avistarse durante sus migraciones</li>
+            <li>Presencia en el Hábitat: Pueden avistarse ocasionalmente durante migraciones</li>
+            <li>Dieta: Principalmente peces, especializados en pesca</li>
+            <li>Peso: Alrededor de 1.5 kg (puede variar según la región)</li>
+            <li>Nidificación: Construyen grandes nidos en lugares elevados</li>
+            <li>Migración: Viajan largas distancias entre sus áreas de reproducción y alimentación</li>
+            <li>Nombres Relacionados: Águila pescadora</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!-- barnswallow.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre la Barn Swallow</title>
+</head>
+<body>
+    <h1>Barn Swallow</h1>
+    <img src="ImagesBirds/Barn Swallow.jpg" alt="Imagen de la Barn Swallow" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre a la hermosa Barn Swallow!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la Barn Swallow es una de las aves más fascinantes!</li>
+            <li>¿Sabías que la Barn Swallow tiene una cola bifurcada y le encanta volar rápidamente en busca de insectos? ¡Como un verdadero acróbata del cielo! 🕊️🪶</li>
+            <li>Su nombre científico es Hirundo rustica, pero puedes llamarla "Barn Swallow". ¡Un nombre que refleja su preferencia por anidar en graneros y estructuras similares!</li>
+            <li>Les encanta el cielo de Galápagos, así que mantén tus ojos en alto para ver sus elegantes acrobacias aéreas.</li>
+            <li>Recuerda respetar su entorno natural y disfrutar de la maravilla de la vida silvestre. ¡Que tengas un día lleno de exploración!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre a la Barn Swallow!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la diversidad de aves incluye a la elegante Barn Swallow!</li>
+            <li>Nombre Científico: Hirundo rustica</li>
+            <li>¿Sabías que la Barn Swallow, con su cola distintiva y rápida agilidad, es conocida por cazar insectos en vuelo?</li>
+            <li>Estado de Conservación: Preocupación menor. Su adaptabilidad le ha permitido prosperar en varios hábitats.</li>
+            <li>¿Dónde verla? Puedes observar a la Barn Swallow en vuelo, particularmente cerca de estructuras como graneros y edificaciones.</li>
+            <li>¡Curiosidad turística! La Barn Swallow es una experta en acrobacias aéreas, así que disfruta de su vuelo mientras exploras Galápagos.</li>
+            <li>Recuerda ser un observador respetuoso y apreciar la vida silvestre desde una distancia segura. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Hirundo rustica</li>
+            <li>Estado de Conservación: Preocupación menor</li>
+            <li>Distribución Geográfica: Mundial, migratorio en Galápagos</li>
+            <li>Descubrimiento y Nomenclatura: Su nombre científico refleja su preferencia por anidar en estructuras humanas. Nomenclatura atribuida por Linnaeus.</li>
+            <li>Hábitat: Diversos hábitats abiertos, adaptándose a la presencia humana. Prefieren anidar en edificaciones.</li>
+            <li>Origen: Nativa, con poblaciones migratorias en Galápagos</li>
+            <li>Presencia en el Hábitat: Común alrededor de estructuras humanas, especialmente en áreas rurales.</li>
+            <li>Dieta: Mayormente insectívora, atrapando insectos en vuelo</li>
+            <li>Peso: Alrededor de 20 g</li>
+            <li>Anidación: Utilizan barro y hierbas para construir nidos en repisas y vigas de edificaciones</li>
+            <li>Comportamiento Migratorio: Viajan largas distancias entre áreas de reproducción y áreas de invernada</li>
+            <li>Interacciones con Ecosistema: Control de poblaciones de insectos, adaptación a la presencia humana</li>
+            <li>Nombres Relacionados: Golondrina común, Golondrina de granero</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

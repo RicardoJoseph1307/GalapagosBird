@@ -1,0 +1,74 @@
+<!-- longtailedjaeger.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Long-tailed Jaeger</title>
+</head>
+<body>
+    <h1>Long-tailed Jaeger</h1>
+    <img src="ImagesBirds/Long Tailed Jaeger.jpg" alt="Imagen del Long-tailed Jaeger" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al valiente Long-tailed Jaeger!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, hogar de aves asombrosas como el Long-tailed Jaeger!</li>
+            <li>¿Sabías que el Long-tailed Jaeger es un maestro en la captura de insectos y pequeños vertebrados durante sus vuelos acrobáticos? ¡Como un piloto experto! 🐜🕊️</li>
+            <li>Su nombre científico es Stercorarius longicaudus, pero puedes llamarlo "Long-tailed Jaeger". ¡Un nombre que destaca su distintiva cola larga!</li>
+            <li>Esta ave no es nativa de Galápagos, pero en ocasiones se ha avistado durante sus migraciones. ¡Mira hacia el cielo y podrías tener la suerte de verla!</li>
+            <li>Recuerda ser un observador respetuoso y disfrutar de la maravilla de la naturaleza desde una distancia segura. ¡Que tengas un día lleno de exploración!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Long-tailed Jaeger!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la diversidad de aves incluye al valiente Long-tailed Jaeger!</li>
+            <li>Nombre Científico: Stercorarius longicaudus</li>
+            <li>¿Sabías que el Long-tailed Jaeger es un hábil cazador que realiza vuelos acrobáticos para atrapar insectos y pequeños vertebrados?</li>
+            <li>Estado de Conservación: Preocupación menor. Su habilidad de caza y adaptabilidad le han conferido éxito en diferentes hábitats.</li>
+            <li>¿Dónde verlo? Aunque no es residente, a veces se avista durante sus migraciones en las Islas Galápagos.</li>
+            <li>¡Curiosidad turística! El Long-tailed Jaeger es conocido por robar comida de otras aves marinas, ¡un comportamiento astuto para asegurar su alimentación!</li>
+            <li>Recuerda disfrutar de la observación de aves de manera ética y sin interferir en su entorno natural. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Stercorarius longicaudus</li>
+            <li>Estado de Conservación: Preocupación menor</li>
+            <li>Distribución Geográfica: Amplia distribución en regiones árticas y subárticas, migratorio en Galápagos</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico atribuido a diferentes naturalistas, destaca su cola larga que lo diferencia de otras especies de su género.</li>
+            <li>Hábitat: Zonas árticas y subárticas durante la temporada de reproducción, migratorio en Galápagos</li>
+            <li>Origen: No nativo de Galápagos, migratorio ocasional</li>
+            <li>Presencia en el Hábitat: Variable, migratorio en Galápagos</li>
+            <li>Dieta: Carnívoro, se alimenta de insectos, pequeños vertebrados y ocasionalmente roba comida de otras aves</li>
+            <li>Peso: Alrededor de 300-500 gramos</li>
+            <li>Comportamiento Reproductivo: Anida en el suelo en colonias dispersas, puesta de huevos en el verano ártico</li>
+            <li>Adaptaciones: Cola larga para maniobras aéreas y captura eficiente de presas</li>
+            <li>Interacciones con Ecosistema: Contribuye al control de poblaciones de insectos y pequeños vertebrados</li>
+            <li>Nombres Relacionados: Stercorarius, Skua de Cola Larga</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

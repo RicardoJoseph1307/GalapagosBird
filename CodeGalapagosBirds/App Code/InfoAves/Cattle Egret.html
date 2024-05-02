@@ -1,0 +1,73 @@
+<!-- cattleegret.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Cattle Egret</title>
+</head>
+<body>
+    <h1>Cattle Egret</h1>
+    <img src="ImagesBirds/Cattle Egret.jpg" alt="Imagen del Cattle Egret" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al simpático Cattle Egret!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde el Cattle Egret es un visitante encantador!</li>
+            <li>¿Sabías que el Cattle Egret es un experto en seguir al ganado y encontrar insectos para comer? ¡Como un amigo alado de las vacas! 🐄🦢</li>
+            <li>Su nombre científico es Bubulcus ibis, pero puedes llamarlo "Cattle Egret". ¡Un nombre que refleja su amistosa relación con el ganado!</li>
+            <li>Les encanta pasear cerca de los animales de granja, ¡así que puedes encontrarlos en lugares inesperados!</li>
+            <li>Recuerda ser amable y observarlos desde la distancia para no molestarlos. ¡Disfruta de tu encuentro con esta ave especial!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Cattle Egret!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde el Cattle Egret agrega un toque encantador al paisaje!</li>
+            <li>Nombre Científico: Bubulcus ibis</li>
+            <li>¿Sabías que el Cattle Egret es conocido por seguir al ganado y alimentarse de insectos que son molestos para los animales? ¡Un hábito inteligente y beneficioso!</li>
+            <li>Estado de Conservación: Preocupación menor. Su adaptabilidad y relación con el ganado contribuyen a su estabilidad poblacional.</li>
+            <li>¿Dónde verlos? Busca al Cattle Egret cerca de animales de granja, como ganado y caballos. ¡Un espectáculo único en la naturaleza!</li>
+            <li>¡Curiosidad turística! Aprovechan los insectos que son espantados por el ganado, creando una asociación beneficiosa para ambas partes. ¡Una maravilla de la coexistencia!</li>
+            <li>Recuerda disfrutar de la observación de aves de manera responsable, manteniendo una distancia respetuosa. ¡Que tengas un viaje lleno de descubrimientos!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Bubulcus ibis</li>
+            <li>Estado de Conservación: Preocupación menor</li>
+            <li>Distribución Geográfica: Amplia distribución mundial; presencia en Galápagos como posible vagabundo</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico Bubulcus ibis refleja su relación con el ganado y su preferencia por seguir al ganado (Bubulcus proviene de "bubulus" que significa buey en latín).</li>
+            <li>Hábitat: Varía, pero suele encontrarse en áreas agrícolas, pastizales y cerca de cuerpos de agua</li>
+            <li>Origen: Puede ser introducido o vagabundo en Galápagos, ya que su presencia se asocia comúnmente con áreas agrícolas y ganaderas</li>
+            <li>Presencia en el Hábitat: Común en áreas agrícolas, especialmente cerca de ganado</li>
+            <li>Dieta: Principalmente insectos, especialmente aquellos molestos para el ganado</li>
+            <li>Peso: Aproximadamente 400 g</li>
+            <li>Anidación: Construyen nidos en árboles o arbustos cerca de cuerpos de agua</li>
+            <li>Biodiversidad: Contribuye al control de insectos y puede tener impactos positivos en la salud del ganado</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!-- piedbilledgrebe.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Pied-billed Grebe</title>
+</head>
+<body>
+    <h1>Pied-billed Grebe</h1>
+    <img src="ImagesBirds/PiedBilledGrebe.jpg" alt="Imagen del Pied-billed Grebe" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al simpático Pied-billed Grebe!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, hogar de aves fascinantes como el Pied-billed Grebe!</li>
+            <li>¿Sabías que los Pied-billed Grebes son aves acuáticas que parecen pequeñas pelotas de plumas flotando en el agua? ¡Muy divertidas de observar! 🌊🐦</li>
+            <li>Su nombre científico es Podilymbus podiceps, pero puedes llamarlos "Pied-billed Grebes". ¡Su pico ancho y corto es su característica más distintiva!</li>
+            <li>Estos simpáticos pájaros a veces visitan las Islas Galápagos durante sus viajes. ¡Quizás tengas suerte y los veas en alguna de tus excursiones!</li>
+            <li>Recuerda siempre mantener una distancia respetuosa y no molestar a estas adorables aves. ¡Disfruta explorando las islas!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Pied-billed Grebe!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la diversidad de aves maravillosas incluye al encantador Pied-billed Grebe!</li>
+            <li>Nombre Científico: Podilymbus podiceps</li>
+            <li>¿Sabías que los Pied-billed Grebes tienen un pico peculiarmente grueso y corto? Es su distintiva "etiqueta de identificación".</li>
+            <li>Estado de Conservación: Varía según la región, pero generalmente de preocupación menor.</li>
+            <li>¿Dónde verlos? Aunque no son nativos de Galápagos, a veces visitan estas islas durante sus desplazamientos. Puedes encontrarlos en cuerpos de agua cercanos.</li>
+            <li>¡Curiosidad turística! Los Pied-billed Grebes son excelentes nadadores y pueden sumergirse completamente bajo el agua para buscar comida. ¡Una vista sorprendente!</li>
+            <li>Recuerda respetar el entorno natural y mantener una distancia segura para no interferir con sus actividades cotidianas. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Podilymbus podiceps</li>
+            <li>Estado de Conservación: Varía, pero generalmente de preocupación menor</li>
+            <li>Distribución Geográfica: Amplia distribución en América, ocasional en Galápagos</li>
+            <li>Descubrimiento y Nomenclatura: Proviene de la palabra latina "podex" que significa "trasero" y "limbus" que significa "borde". Nombre científico atribuido a diferentes naturalistas.</li>
+            <li>Hábitat: Agua dulce, lagos, estanques, a veces en zonas costeras</li>
+            <li>Origen: No nativo de Galápagos, ocasionalmente avistado durante migraciones</li>
+            <li>Presencia en el Hábitat: Variable, depende de la temporada y disponibilidad de hábitats acuáticos</li>
+            <li>Dieta: Principalmente carnívoro, se alimenta de peces, insectos y pequeños vertebrados acuáticos</li>
+            <li>Peso: Alrededor de 400-600 gramos</li>
+            <li>Comportamiento Reproductivo: Construye nidos flotantes en el agua, donde la hembra pone varios huevos</li>
+            <li>Adaptaciones: Plumaje denso y capacidad para sumergirse bajo el agua</li>
+            <li>Interacciones con Ecosistema: Contribuye al control de poblaciones de peces y otros organismos acuáticos</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

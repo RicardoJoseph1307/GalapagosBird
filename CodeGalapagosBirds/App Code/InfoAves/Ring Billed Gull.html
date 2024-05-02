@@ -1,0 +1,74 @@
+<!-- ringbilledgull.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre la Ring-billed Gull</title>
+</head>
+<body>
+    <h1>Ring-billed Gull</h1>
+    <img src="ImagesBirds/Ring Billed Gull.jpg" alt="Imagen de la Ring-billed Gull" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre a la elegante Ring-billed Gull!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, hogar de aves fascinantes como la Ring-billed Gull!</li>
+            <li>¿Sabías que las Ring-billed Gulls son gaviotas elegantes con un anillo distintivo alrededor de sus picos? ¡Como si llevaran una joya! 💍🕊️</li>
+            <li>Su nombre científico es Larus delawarensis, pero puedes llamarlas "Ring-billed Gulls". ¡Un nombre que destaca su característica anillada!</li>
+            <li>Aunque estas gaviotas no son nativas de Galápagos, a veces se les puede ver durante sus viajes migratorios. ¡Mira hacia el cielo y quizás las descubras!</li>
+            <li>Recuerda siempre respetar la naturaleza y disfrutar de estas aves desde una distancia segura. ¡Que tengas un día lleno de exploración!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre a la Ring-billed Gull!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la diversidad de aves incluye a la elegante Ring-billed Gull!</li>
+            <li>Nombre Científico: Larus delawarensis</li>
+            <li>¿Sabías que las Ring-billed Gulls son conocidas por su aspecto elegante y el anillo negro alrededor de sus picos?</li>
+            <li>Estado de Conservación: Preocupación menor. Su adaptabilidad las ha hecho exitosas en diversos entornos.</li>
+            <li>¿Dónde verlas? Aunque no son residentes permanentes, a veces se avistan durante sus migraciones en las Islas Galápagos.</li>
+            <li>¡Curiosidad turística! Las Ring-billed Gulls son excelentes planeadoras y pueden verse flotando sobre el agua en busca de comida.</li>
+            <li>Recuerda ser un observador responsable y disfrutar de la belleza de la naturaleza sin perturbarla. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Larus delawarensis</li>
+            <li>Estado de Conservación: Preocupación menor</li>
+            <li>Distribución Geográfica: Amplia distribución en Norteamérica, migratorio en Galápagos</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico atribuido a diferentes naturalistas, incluyendo a Linnaeus.</li>
+            <li>Hábitat: Costas, playas, áreas urbanas</li>
+            <li>Origen: No nativo de Galápagos, migratorio ocasional</li>
+            <li>Presencia en el Hábitat: Variable, migratorio en Galápagos</li>
+            <li>Dieta: Omnívora, se alimenta de peces, insectos, carroña y desechos humanos</li>
+            <li>Peso: Alrededor de 450-680 gramos</li>
+            <li>Comportamiento Reproductivo: Nidifican en colonias, ponen huevos en nidos construidos en el suelo</li>
+            <li>Adaptaciones: Pico puntiagudo adaptado para capturar presas, patas palmípedas para nadar</li>
+            <li>Interacciones con Ecosistema: Contribuyen al control de poblaciones de insectos y limpieza de desechos</li>
+            <li>Nombres Relacionados: Gaviota de Pico Anillado</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

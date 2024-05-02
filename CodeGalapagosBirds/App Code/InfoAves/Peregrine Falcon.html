@@ -1,0 +1,72 @@
+<!-- peregrine_falcon.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Peregrine Falcon</title>
+</head>
+<body>
+    <h1>Peregrine Falcon</h1>
+    <img src="ImagesBirds/Peregrine Falcon.jpg" alt="Imagen del Peregrine Falcon" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Conoce al increíble Halcón Peregrino!</h2>
+        <ul>
+            <li>¡Hola amiguito! El Halcón Peregrino es un ave rapaz asombrosa que podría visitar las Islas Galápagos en sus viajes!</li>
+            <li>Su nombre científico es Falco peregrinus, un nombre genial para un ave tan rápida como un rayo.</li>
+            <li>Este halcón es famoso por ser el pájaro más rápido en vuelo, ¡puede alcanzar velocidades de más de 300 km/h al lanzarse en picada!</li>
+            <li>Aunque no sea muy grande, su destreza en el vuelo y su agudo instinto de cazador lo convierten en un auténtico cazador de aves en el cielo.</li>
+            <li>¡Cuídalos y admira su vuelo majestuoso si tienes la suerte de verlos en las Galápagos!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Halcón Peregrino en Galápagos!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde podrías ser testigo del asombroso vuelo del Halcón Peregrino!</li>
+            <li>Nombre Científico: Falco peregrinus</li>
+            <li>Este halcón es famoso por su velocidad impresionante. ¿Sabías que puede alcanzar velocidades de más de 300 km/h al cazar en picada?</li>
+            <li>Estado de Conservación: No amenazado. Disfruta de la majestuosidad de este depredador en el cielo de Galápagos.</li>
+            <li>¿Dónde verlos? Busca en acantilados y zonas rocosas, lugares favoritos para el Halcón Peregrino.</li>
+            <li>¡Curiosidad turística! Aunque son feroces cazadores, también son aves migratorias y podrían visitar las islas en ciertas épocas.</li>
+            <li>Recuerda mantener una distancia respetuosa para no interferir con sus actividades diarias. ¡Buena observación!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos sobre el Halcón Peregrino en Galápagos:</h2>
+        <ul>
+            <li>Nombre Científico: Falco peregrinus</li>
+            <li>Estado de Conservación: No amenazado</li>
+            <li>Distribución Geográfica: Amplia distribución en todo el mundo, incluyendo regiones rocosas y acantilados en las Islas Galápagos.</li>
+            <li>Descubrimiento y Nomenclatura: Su nombre científico, Falco peregrinus, se refiere a su naturaleza de "peregrino" o viajero.</li>
+            <li>Hábitat: Prefiere áreas rocosas y acantilados para anidar y cazar presas.</li>
+            <li>Origen: No nativo, pero es un visitante ocasional en Galápagos durante sus migraciones.</li>
+            <li>Presencia en el Hábitat: Puede ser avistado en ciertas épocas del año, especialmente en zonas rocosas.</li>
+            <li>Dieta: Carnívoro, se alimenta principalmente de aves que captura en vuelo.</li>
+            <li>Peso: Varía según la región, pero generalmente alrededor de 1 kg.</li>
+            <li>Comportamiento Reproductivo: Construyen nidos en repisas rocosas y son monógamos durante la temporada de reproducción.</li>
+            <li>Migración: Realizan migraciones estacionales y podrían visitar las Galápagos en ciertos periodos.</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

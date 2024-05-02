@@ -1,0 +1,73 @@
+<!-- bobolink.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Bobolink</title>
+</head>
+<body>
+    <h1>Bobolink</h1>
+    <img src="ImagesBirds/Bobolink.jpg" alt="Imagen del Bobolink" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al increíble Bobolink!</h2>
+        <ul>
+            <li>¡Bienvenido a la naturaleza, donde habita el hermoso Bobolink!</li>
+            <li>¿Sabías que los Bobolinks son pájaros migratorios con un canto alegre y coloridos plumajes? Puedes reconocerlos por su apariencia única y llamativa.</li>
+            <li>Su nombre científico es Dolichonyx oryzivorus, pero puedes llamarlos "Bobolinks". ¡Un nombre divertido y único, verdad?</li>
+            <li>Viven en praderas y campos, y aunque no son nativos de las Islas Galápagos, podrías avistarlos durante sus migraciones. 🌾</li>
+            <li>¡Sorpresa! Los Bobolinks son viajeros increíbles, recorren largas distancias durante sus viajes. ¡Como pequeños exploradores alados!</li>
+            <li>¡Espero que te haya encantado conocer a estos pequeños cantantes del cielo! 🌈</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Bobolink!</h2>
+        <ul>
+            <li>¡Bienvenido a la naturaleza, donde habita el hermoso Bobolink!</li>
+            <li>Nombre Científico: Dolichonyx oryzivorus (Bobolink)</li>
+            <li>¿Sabías que los Bobolinks son pájaros migratorios con un canto alegre y coloridos plumajes? Puedes reconocerlos por su apariencia única y llamativa.</li>
+            <li>Estado de Conservación: Aunque no están en peligro, es importante respetar su entorno y disfrutar de su belleza desde una distancia adecuada.</li>
+            <li>¿Dónde verlos? Durante la primavera y el verano, puedes encontrar a los Bobolinks en praderas y campos de América del Norte, ¡aunque no son nativos de las Islas Galápagos podrías avistarlos durante sus migraciones!</li>
+            <li>¡Curiosidad turística! Los Bobolinks son viajeros increíbles, recorren largas distancias durante sus viajes. ¡Imagina ser testigo de su asombrosa travesía migratoria!</li>
+            <li>Recuerda disfrutar de la observación de aves de manera responsable para preservar su hábitat natural. ¡Buen viaje explorador!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Dolichonyx oryzivorus (Bobolink)</li>
+            <li>Estado de Conservación: Preocupación Menor</li>
+            <li>Distribución Geográfica: Amplia distribución en praderas y campos de América del Norte, migratorio</li>
+            <li>Hábitat: Praderas, campos</li>
+            <li>Origen: No nativo de las Islas Galápagos; podrían avistarse durante sus migraciones</li>
+            <li>Presencia en el Hábitat: Vagabundo durante migraciones</li>
+            <li>Dieta: Principalmente semillas e insectos durante la temporada de cría</li>
+            <li>Peso: Alrededor de 40 gramos</li>
+            <li>Nidificación: En el suelo, construyen nidos en pastos altos</li>
+            <li>Migración: Viajan largas distancias entre América del Norte y América del Sur</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

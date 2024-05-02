@@ -1,0 +1,74 @@
+<!-- americancoot.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el American Coot</title>
+</head>
+<body>
+    <h1>American Coot</h1>
+    <img src="ImagesBirds/American Coot.jpg" alt="Imagen del American Coot" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al increíble American Coot!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde el American Coot es uno de los habitantes alados!</li>
+            <li>¿Sabías que el American Coot tiene patas muy peculiares y nadan como pequeñas barcas? ¡Imagina un patito con grandes pies! 🦆🚤</li>
+            <li>Su nombre científico es Fulica americana, pero puedes llamarlo "American Coot". ¡Un nombre que refleja su elegancia acuática!</li>
+            <li>Se les puede ver nadando en lagunas y estanques de las islas, ¡así que mantén los ojos abiertos para disfrutar de su gracioso chapoteo!</li>
+            <li>Recuerda respetar su hogar natural y disfrutar de la belleza de la vida silvestre. ¡Que tengas un día lleno de exploración!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al American Coot!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la diversidad de aves incluye al elegante American Coot!</li>
+            <li>Nombre Científico: Fulica americana</li>
+            <li>¿Sabías que el American Coot, con sus patas lobuladas, es un nadador experto y se desplaza por el agua con gracia y agilidad?</li>
+            <li>Estado de Conservación: Preocupación menor. Su adaptabilidad le ha permitido prosperar en diversos entornos acuáticos.</li>
+            <li>¿Dónde verlo? Puedes encontrar al American Coot en lagunas y estanques de las Islas Galápagos, disfrutando de su hábitat acuático.</li>
+            <li>¡Curiosidad turística! Observa sus habilidades de natación únicas y su distintivo chapoteo mientras exploras la belleza natural de Galápagos.</li>
+            <li>Recuerda ser un observador respetuoso y apreciar la vida silvestre desde una distancia segura. ¡Buen viaje!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Fulica americana</li>
+            <li>Estado de Conservación: Preocupación menor</li>
+            <li>Distribución Geográfica: América del Norte y del Sur, migratorio en Galápagos</li>
+            <li>Descubrimiento y Nomenclatura: Su nombre científico refleja su origen americano. Adjetivos específicos pueden variar según la subespecie.</li>
+            <li>Hábitat: Lagunas, estanques, y cuerpos de agua dulce, adaptándose a una variedad de ambientes acuáticos</li>
+            <li>Origen: Nativo en América del Norte y del Sur, migratorio ocasional en Galápagos</li>
+            <li>Presencia en el Hábitat: Común en lagunas y estanques de Galápagos</li>
+            <li>Dieta: Mayormente vegetariana, se alimenta de plantas acuáticas y pequeños invertebrados</li>
+            <li>Peso: Alrededor de 1 kg</li>
+            <li>Comportamiento Reproductivo: Nidos flotantes en cuerpos de agua, puesta de huevos durante la temporada de reproducción</li>
+            <li>Adaptaciones: Patas lobuladas para nadar, plumaje denso para flotar</li>
+            <li>Interacciones con Ecosistema: Contribuye al control de poblaciones de insectos acuáticos y plantas acuáticas</li>
+            <li>Nombres Relacionados: Coot americano, Calamón americano</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

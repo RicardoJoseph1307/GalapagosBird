@@ -1,0 +1,74 @@
+<!-- pyrocephalus_dubius.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Pájaro Brujo de San Cristóbal</title>
+</head>
+<body>
+    <h1>Pájaro Brujo de San Cristóbal</h1>
+    <img src="ImagesBirds/PajaroBrujoSanCristobal.jpg" alt="Imagen del Pájaro Brujo de San Cristóbal" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al Pájaro Brujo de San Cristóbal!</h2>
+        <ul>
+            <li>¡Hola amiguito! ¿Sabías que el Pájaro Brujo de San Cristóbal es un pequeño y colorido habitante de las Islas Galápagos?</li>
+            <li>Su nombre científico es Pyrocephalus dubius, pero puedes llamarlo "pájaro brujo". ¡Su plumaje es asombroso, con tonos amarillos y cafés!</li>
+            <li>Aunque es raro verlo, ¡este pájaro solía estar presente en varias islas grandes de Galápagos!</li>
+            <li>Es un experto cazador de insectos y su dieta consiste en pequeños bocadillos invertebrados.</li>
+            <li>¡Aunque es pequeño, desempeñó un papel vital en la biodiversidad de las islas!</li>
+            <li>Recuerda, ¡si alguna vez lo ves, admíralo desde lejos para no molestarlo! 🌈</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Pájaro Brujo de San Cristóbal!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde la naturaleza te sorprenderá! Conoce al encantador Pájaro Brujo de San Cristóbal.</li>
+            <li>Nombre Científico: Pyrocephalus dubius</li>
+            <li>Este pequeño y vibrante pájaro, con su plumaje en tonos amarillos y cafés, es una maravilla para ver.</li>
+            <li>Estado de Conservación: Desafortunadamente, se considera extinto desde 2016, pero su historia aún es fascinante.</li>
+            <li>¿Dónde solía vivir? Originalmente presente en varias islas grandes de Galápagos, pero ahora es raro encontrarlo.</li>
+            <li>Curiosidad turística: Aunque es pequeño, su contribución a la biodiversidad de las islas fue significativa.</li>
+            <li>Si por casualidad lo ves, ¡disfruta de este encuentro único pero respeta su espacio!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Pyrocephalus dubius</li>
+            <li>Estado de Conservación: Extinto (UICN). Última observación en 2016, búsquedas intensas entre 2015-2021 sin resultados.</li>
+            <li>Distribución Geográfica: Originalmente presente en todas las islas grandes de Galápagos, excepto Baltra, Española, Genovesa y San Cristóbal.</li>
+            <li>Hábitat: Se ha observado en hábitats costeros, áridos, de transición, agricultura y asociados con Scalesia y helechos.</li>
+            <li>Origen: Considerado nativo de Galápagos, aunque con poblaciones en declive y posiblemente extintas en algunas islas.</li>
+            <li>Presencia en el Hábitat: Raro en Santa Fé en censos recientes (2017), en declive en Santa Cruz, Santiago, y posiblemente extinto en Floreana.</li>
+            <li>Dieta: Se alimenta exclusivamente de invertebrados, capturando insectos en vuelo o en el suelo con vuelos rápidos.</li>
+            <li>Peso: Aproximadamente 10 g.</li>
+            <li>Anidación: Nidificación en forma de copa.</li>
+            <li>Cambios y Evolución: La población ha experimentado un declive significativo, clasificado como extinto desde 2016.</li>
+            <li>Biodiversidad: Aunque actualmente en declive, su papel en la biodiversidad del ecosistema de Galápagos es notable.</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos.</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

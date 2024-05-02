@@ -1,0 +1,73 @@
+<!-- indigo_bunting.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Indigo Bunting</title>
+</head>
+<body>
+    <h1>Indigo Bunting</h1>
+    <img src="ImagesBirds/IndigoBunting.jpg" alt="Imagen del Indigo Bunting" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al hermoso Indigo Bunting!</h2>
+        <ul>
+            <li>¡Bienvenido al mundo del Indigo Bunting, un ave con colores asombrosos!</li>
+            <li>Su nombre científico es Passerina cyanea, pero puedes llamarlos "Indigo Buntings". ¡Un nombre colorido, verdad?</li>
+            <li>Los Indigo Buntings son conocidos por sus plumajes azules brillantes, ¡como pequeñas joyas voladoras en el cielo! 🐦🌈</li>
+            <li>Aunque no son nativos de las Islas Galápagos, podrías tener la suerte de avistarlos durante sus migraciones. ¡Imagina ver esos colores mientras exploras la naturaleza!</li>
+            <li>¡Sorpresa! A pesar de su pequeño tamaño, los Indigo Buntings tienen un canto melodioso que alegra cualquier día.</li>
+            <li>Es esencial proteger a estas aves y su entorno para que todos podamos disfrutar de su belleza. ¡Espero que te maravilles con la magia de los Indigo Buntings!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Indigo Bunting!</h2>
+        <ul>
+            <li>¡Bienvenido al mundo del Indigo Bunting, un ave con colores asombrosos!</li>
+            <li>Nombre Científico: Passerina cyanea (Indigo Bunting)</li>
+            <li>Los Indigo Buntings son aves pequeñas pero deslumbran con sus plumajes azules vibrantes, ¡una maravilla para la vista!</li>
+            <li>Estado de Conservación: Preocupación Menor, pero es crucial preservar su hábitat para mantener su belleza en la naturaleza.</li>
+            <li>¿Dónde verlos? Aunque no son nativos de las Islas Galápagos, podrías avistarlos durante sus migraciones, especialmente en áreas con vegetación.</li>
+            <li>¡Curiosidad turística! A pesar de su tamaño, los Indigo Buntings tienen un canto encantador que agrega música a la naturaleza circundante.</li>
+            <li>Recuerda disfrutar de estas aves desde una distancia respetuosa para no perturbar su rutina diaria. ¡Disfruta explorando el mundo del Indigo Bunting!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Passerina cyanea (Indigo Bunting)</li>
+            <li>Estado de Conservación: Preocupación Menor</li>
+            <li>Distribución Geográfica: Amplia distribución en América del Norte, migratorio; no nativo de las Islas Galápagos</li>
+            <li>Hábitat: Bosques, áreas con arbustos y vegetación densa</li>
+            <li>Origen: No nativo de las Islas Galápagos; migratorio y ocasionalmente avistado durante migraciones</li>
+            <li>Presencia en el Hábitat: Pueden avistarse ocasionalmente durante migraciones</li>
+            <li>Dieta: Semillas, insectos, bayas</li>
+            <li>Peso: Alrededor de 13 g (puede variar según la región)</li>
+            <li>Nidificación: Construyen nidos en arbustos o árboles bajos</li>
+            <li>Migración: Viajan largas distancias entre sus áreas de reproducción y alimentación</li>
+            <li>Nombres Relacionados: Blue Canary, Blue Linnet</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

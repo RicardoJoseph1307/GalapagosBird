@@ -1,0 +1,75 @@
+<!-- grey_plover.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Grey Plover</title>
+</head>
+<body>
+    <h1>Grey Plover</h1>
+    <img src="ImagesBirds/Grey Plover.jpg" alt="Imagen del Grey Plover" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al simpático Grey Plover!</h2>
+        <ul>
+            <li>¡Hola amiguito! El Grey Plover es un ave playera que ocasionalmente visita las increíbles Islas Galápagos.</li>
+            <li>Su nombre científico es Pluvialis squatarola, ¡un nombre genial para un ave genial!</li>
+            <li>Aunque no sea un superhéroe del cielo, ¡puede volar distancias sorprendentes durante sus migraciones!</li>
+            <li>Le encanta pasear por las playas y buscar insectos y pequeños animales para comer. ¡Una delicia para ellos!</li>
+            <li>Aunque no sea tan colorido como otros pájaros, su plumaje gris le ayuda a camuflarse y ser un experto en esconderse.</li>
+            <li>¡Cuídalos cuando los veas en la playa y disfruta de la belleza natural que nos regalan en Galápagos!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Grey Plover en Galápagos!</h2>
+        <ul>
+            <li>¡Bienvenido a las Islas Galápagos, donde puedes encontrar al encantador Grey Plover ocasionalmente!</li>
+            <li>Nombre Científico: Pluvialis squatarola</li>
+            <li>Este no es un pájaro de colores vibrantes, pero su elegancia en tonos grises lo hace destacar en las playas galapagueñas.</li>
+            <li>Estado de Conservación: No amenazado. Asegúrate de respetar su hábitat mientras disfrutas de la playa.</li>
+            <li>¿Sabías que estos pajaritos viajan grandes distancias durante sus migraciones? ¡Un verdadero trotamundos!</li>
+            <li>Observa cómo exploran las playas en busca de insectos y pequeños animales. ¡Su técnica es fascinante!</li>
+            <li>Recuerda mantener una distancia respetuosa para no molestarlos. ¡Disfruta de tu encuentro con la vida silvestre en Galápagos!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos sobre el Grey Plover en Galápagos:</h2>
+        <ul>
+            <li>Nombre Científico: Pluvialis squatarola</li>
+            <li>Estado de Conservación: No amenazado</li>
+            <li>Distribución Geográfica: Costas y playas en varias regiones del mundo, migratorio en amplias áreas. Visitante ocasional en las Islas Galápagos.</li>
+            <li>Descubrimiento y Nomenclatura: El nombre científico Pluvialis squatarola ha sido utilizado por naturalistas para describir al Grey Plover.</li>
+            <li>Hábitat: Costas, playas, humedales durante la migración. Ocasionalmente presente en Galápagos.</li>
+            <li>Origen: Nativo, pero su amplia distribución también lo hace un visitante ocasional en las Islas Galápagos.</li>
+            <li>Presencia en el Hábitat: Regular</li>
+            <li>Dieta: Insectos, gusanos y pequeños animales que encuentra en las zonas costeras.</li>
+            <li>Peso: Alrededor de 230-320 gramos</li>
+            <li>Comportamiento de Anidación: Nidos en el suelo cerca de zonas húmedas durante la temporada de reproducción.</li>
+            <li>Interacciones Ecológicas: Contribuye al equilibrio de las poblaciones de insectos en las áreas que visita.</li>
+            <li>Curiosidades Biológicas: Aunque no es un ave colorida, su plumaje gris le brinda un camuflaje efectivo en los ambientes costeros.</li>
+            <li>Nombres Relacionados: No hay nombres étnicos específicos.</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!-- black_billed_cuckoo.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre el Black-billed Cuckoo</title>
+</head>
+<body>
+    <h1>Black-billed Cuckoo</h1>
+    <img src="ImagesBirds/BlackBilledCuckoo.jpg" alt="Imagen del Black-billed Cuckoo" width="300" height="200">
+
+    <!-- Sección para niños -->
+    <div id="info-nino" style="display: none;">
+        <h2>¡Descubre al fascinante Black-billed Cuckoo!</h2>
+        <ul>
+            <li>¡Bienvenido al mundo del Black-billed Cuckoo, un ave única con un canto distintivo!</li>
+            <li>Su nombre científico es Coccyzus erythropthalmus, pero puedes llamarlos "Black-billed Cuckoos". ¡Un nombre interesante, verdad?</li>
+            <li>Los Black-billed Cuckoos tienen un plumaje discreto, ¡pero su canto agudo resuena en los bosques como un reloj de cuco! 🎵🐦</li>
+            <li>Aunque no son nativos de las Islas Galápagos, podrían aparecer durante sus migraciones, así que mantén los oídos atentos durante tu exploración.</li>
+            <li>¡Curiosidad! A pesar de su apariencia reservada, estos cócteles son excelentes depredadores de insectos, ayudando a equilibrar el ecosistema.</li>
+            <li>Es importante preservar los hábitats boscosos para que estas aves sigan siendo parte de la sinfonía natural. ¡Espero que disfrutes aprendiendo sobre el Black-billed Cuckoo!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para turistas -->
+    <div id="info-turista" style="display: none;">
+        <h2>¡Descubre al Black-billed Cuckoo!</h2>
+        <ul>
+            <li>¡Bienvenido al mundo del Black-billed Cuckoo, un ave única con un canto distintivo!</li>
+            <li>Nombre Científico: Coccyzus erythropthalmus (Black-billed Cuckoo)</li>
+            <li>Los Black-billed Cuckoos pueden no destacar por su plumaje, ¡pero su canto agudo llena los bosques con un sonido encantador!</li>
+            <li>Estado de Conservación: Preocupación Menor, pero es crucial preservar los bosques donde prosperan.</li>
+            <li>¿Dónde verlos? Aunque no son nativos de las Islas Galápagos, podrían aparecer durante sus migraciones, especialmente en áreas con vegetación densa.</li>
+            <li>¡Curiosidad turística! Estos cócteles no solo tienen un canto distintivo, sino que también son depredadores de insectos expertos, contribuyendo al equilibrio ecológico.</li>
+            <li>Recuerda ser respetuoso con el entorno y mantener la distancia para permitir que estas aves continúen desempeñando su papel en la naturaleza. ¡Disfruta tu encuentro con el Black-billed Cuckoo!</li>
+        </ul>
+    </div>
+
+    <!-- Sección para biólogos -->
+    <div id="info-biologo" style="display: none;">
+        <h2>Información para biólogos:</h2>
+        <ul>
+            <li>Nombre Científico: Coccyzus erythropthalmus (Black-billed Cuckoo)</li>
+            <li>Estado de Conservación: Preocupación Menor</li>
+            <li>Distribución Geográfica: Amplia distribución en América del Norte, migratorio; no nativo de las Islas Galápagos</li>
+            <li>Hábitat: Bosques, áreas con vegetación densa</li>
+            <li>Origen: No nativo de las Islas Galápagos; migratorio y ocasionalmente avistado durante migraciones</li>
+            <li>Presencia en el Hábitat: Puede avistarse ocasionalmente durante migraciones</li>
+            <li>Dieta: Principalmente insectos, especialmente orugas</li>
+            <li>Peso: Alrededor de 57 g (puede variar según la región)</li>
+            <li>Nidificación: Construyen nidos de ramitas en arbustos o árboles</li>
+            <li>Migración: Viajan largas distancias entre sus áreas de reproducción y alimentación</li>
+            <li>Canto: Distintivo, similar al sonido de un cuco</li>
+            <li>Nombres Relacionados: Rain Crow, Red-eyed Cuckoo</li>
+        </ul>
+    </div>
+
+    <script>
+        // Leer el parámetro tipoUsuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoUsuario = urlParams.get('tipoUsuario');
+
+        // Mostrar la sección correspondiente según el tipo de usuario
+        if (tipoUsuario === 'niño') {
+            document.getElementById('info-nino').style.display = 'block';
+        } else if (tipoUsuario === 'turista') {
+            document.getElementById('info-turista').style.display = 'block';
+        } else if (tipoUsuario === 'biologo') {
+            document.getElementById('info-biologo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
