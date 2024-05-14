@@ -12,7 +12,7 @@
 
 ### Dataset description 
 
-The dataset consists of 58 folders containing images of various bird species, including endemic, native, and visiting species of the Galapagos Islands. In total, the dataset comprises 7,194 images.
+The dataset consists of 58 folders containing images of various bird species, including endemic, native, and visiting species of the Galapagos Islands. In total, the dataset comprises 6,492 images.
 
 
 | Species                          | Number of Images |
