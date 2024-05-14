@@ -26,7 +26,7 @@
             <img class="d-block mx-auto mb-2" src="LogotipoV2-Simple.png" alt="" width="80" height="80">
             <h1 class="display-5 fw-bold">Bird classification</h1>
             <div class="col-lg-6 mx-auto">
-                <p class="lead mb-0">Clasificación de imágenes de aves utilizando la cámara web y Tensorflow.js</p>
+                <p class="lead mb-0">Bird image classification using webcam and Tensorflow.js</p>
             </div>
         </div>
         <div class="b-example-divider"></div>
@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="col-12 col-md-4 offset-md-4 text-center">
                     <video id="video" playsinline autoplay style="width: 100%;"></video>
-                    <button id="cambiar-camara" onclick="cambiarCamara();">Cambiar cámara</button>
+                    <button id="cambiar-camara" onclick="cambiarCamara();">Change camera</button>
                     <canvas id="canvas" width="400" height="400" style="max-width: 100%; display: none;"></canvas>
                     <div id="resultado"></div>
                     <div id="informacion-importante" class="mt-3">
@@ -117,7 +117,7 @@
                 if (informacionImportante.hasOwnProperty(clave)) {
                     var liElement = document.createElement("div");
                     liElement.className = "mb-2";
-                    liElement.innerHTML = `<strong>${clave}:</strong> (<a href="InfoAves/${informacionImportante[clave]}.html?tipoUsuario=${tipoUsuario}" target="_blank">Más información</a>)`;
+                    liElement.innerHTML = `<strong>${clave}:</strong> (<a href="InfoAves/${informacionImportante[clave]}.html?tipoUsuario=${tipoUsuario}" target="_blank">More information</a>)`;
                     informacionImportanteElement.appendChild(liElement);
                 }
             }
@@ -141,7 +141,7 @@
                 audio: false,
                 video: {
                     width: tamano, height: tamano,
-                    facingMode: facingMode
+                    facingMode: "environment"
                 }
             }
 
@@ -202,68 +202,72 @@
                 var tensor = normalizedImg.expandDims(0);
 
                 var resultado = modelo.predict(tensor).dataSync();
-                var clasesAves = [                
-                    "001.Black_footed_Albatross",
-                    "042.Vermilion_Flycatcher",
-                    "044.Frigatebird",
-                    "182.Yellow_Warbler",
-                    "Cattle Egret",
-                    "013.Bobolink(de visita)",
-                    "014.Indigo_Bunting(de visita)",
-                    "031.Black_billed_Cuckoo(de visita)",
-                    "052.Pied_billed_Grebe(de visita)",
-                    "057.Rose_breasted_Grosbeak(de visita)",
-                    "064.Ring_billed_Gull(de visita)",
-                    "071.Long_tailed_Jaeger(de visita)",
-                    "072.Pomarine_Jaeger(de visita)",
-                    "079.Belted_Kingfisher(de visita)",
-                    "092.Nighthawk(de visita)",
-                    "100.Brown_Pelican(de visita)",
-                    "135.Bank_Swallow(de visita)",
-                    "136.Barn_Swallow(de visita)",
-                    "137.Cliff_Swallow(de visita)",
-                    "139.Scarlet_Tanager(de visita)",
-                    "140.Summer_Tanager(de visita)",
-                    "142.Black_Tern(de visita)",
-                    "144.Common_Tern(de visita)",
-                    "145.Elegant_Tern(de visita)",
-                    "154.Red_eyed_Vireo(de visita)",
-                    "177.Prothonotary_Warbler(de visita)",
-                    "183.Northern_Waterthrush(de visita)",
-                    "186.Cedar_Waxwing(de visita)",
-                    "ALBATROSS",
-                    "FRIGATE",
-                    "GREY PLOVER",
-                    "AMERICAN COOT(de visita)",
-                    "BANANAQUIT(de visita)",
-                    "BARN SWALLOW(de visita)",
-                    "BELTED KINGFISHER(de visita)",
-                    "BLUE HERON(de visita)",
-                    "BOBOLINK(de visita)",
-                    "CEDAR WAXWING(de visita)",
-                    "CINNAMON TEAL(de visita)",
-                    "CROW(de visita)",
-                    "INCA TERN(de visita)",
-                    "INDIGO BUNTING(de visita)",
-                    "LAUGHING GULL(de vista)",
-                    "NORTHERN SHOVELER(de visita)",
-                    "OSPREY(de visita)",
-                    "PEACOCK(de visita)",
-                    "PEREGRINE FALCON(de visita)",
-                    "POMARINE JAEGER(de visita)",
-                    "PUFFIN(de visita)",
-                    "PURPLE MARTIN(de visita)",
-                    "RED KNOT(de visita)",
-                    "ROCK DOVE(de visita)",
-                    "SAND MARTIN(de visita)",
-                    "SCARLET TANAGER(de visita)",
-                    "SHORT BILLED DOWITCHER(de visita)",
-                    "SNOWY EGRET(de visita)",
-                    "SORA(de visita)",
-                    "WHIMBREL(de visita)"
-                ];
-                var clasePredicha = clasesAves[resultado.indexOf(Math.max(...resultado))];
+                var clasesAves = {
+                    "001.Black_footed_Albatross": "ALBATROSS",
+                    "042.Vermilion_Flycatcher": "VERMILION FLYCATCHER",
+                    "044.Frigatebird": "FRIGATEBIRD",
+                    "182.Yellow_Warbler": "YELLOW WARBLER",
+                    "Cattle Egret": "CATTLE EGRET",
+                    "013.Bobolink(de visita)": "BOBOLINK",
+                    "014.Indigo_Bunting(de visita)": "INDIGO BUNTING",
+                    "031.Black_billed_Cuckoo(de visita)": "BLACK BILLED CUCKOO",
+                    "052.Pied_billed_Grebe(de visita)": "PIED BILLED GREBE",
+                    "057.Rose_breasted_Grosbeak(de visita)": "ROSE BREASTED GROSBEAK",
+                    "064.Ring_billed_Gull(de visita)": "RING BILLED GULL",
+                    "071.Long_tailed_Jaeger(de visita)": "LONG TAILED JAEGER",
+                    "072.Pomarine_Jaeger(de visita)": "POMARINE JAEGER",
+                    "079.Belted_Kingfisher(de visita)": "BELTED KINGFISHER",
+                    "092.Nighthawk(de visita)": "NIGHTHAWK",
+                    "100.Brown_Pelican(de visita)": "BROWN PELICAN",
+                    "135.Bank_Swallow(de visita)": "BANK SWALLOW",
+                    "136.Barn_Swallow(de visita)": "BARN SWALLOW",
+                    "137.Cliff_Swallow(de visita)": "CLIFF SWALLOW",
+                    "139.Scarlet_Tanager(de visita)": "SCARLET TANAGER",
+                    "140.Summer_Tanager(de visita)": "SUMMER TANAGER",
+                    "142.Black_Tern(de visita)": "BLACK TERN",
+                    "144.Common_Tern(de visita)": "COMMON TERN",
+                    "145.Elegant_Tern(de visita)": "ELEGANT TERN",
+                    "154.Red_eyed_Vireo(de visita)": "RED EYED VIREO",
+                    "177.Prothonotary_Warbler(de visita)": "PROTHONOTARY WARBLER",
+                    "183.Northern_Waterthrush(de visita)": "NORTHERN WATERTHRUSH",
+                    "186.Cedar_Waxwing(de visita)": "CEDAR WAXWING",
+                    "ALBATROSS": "ALBATROSS",
+                    "FRIGATE": "FRIGATE",
+                    "GREY PLOVER": "GREY PLOVER",
+                    "AMERICAN COOT(de visita)": "AMERICAN COOT",
+                    "BANANAQUIT(de visita)": "BANANAQUIT",
+                    "BARN SWALLOW(de visita)": "BARN SWALLOW",
+                    "BELTED KINGFISHER(de visita)": "BELTED KINGFISHER",
+                    "BLUE HERON(de visita)": "BLUE HERON",
+                    "BOBOLINK(de visita)": "BOBOLINK",
+                    "CEDAR WAXWING(de visita)": "CEDAR WAXWING",
+                    "CINNAMON TEAL(de visita)": "CINNAMON TEAL",
+                    "CROW(de visita)": "CROW",
+                    "INCA TERN(de visita)": "INCA TERN",
+                    "INDIGO BUNTING(de visita)": "INDIGO BUNTING",
+                    "LAUGHING GULL(de vista)": "LAUGHING GULL",
+                    "NORTHERN SHOVELER(de visita)": "NORTHERN SHOVELER",
+                    "OSPREY(de visita)": "OSPREY",
+                    "PEACOCK(de visita)": "PEACOCK",
+                    "PEREGRINE FALCON(de visita)": "PEREGRINE FALCON",
+                    "POMARINE JAEGER(de visita)": "POMARINE JAEGER",
+                    "PUFFIN(de visita)": "PUFFIN",
+                    "PURPLE MARTIN(de visita)": "PURPLE MARTIN",
+                    "RED KNOT(de visita)": "RED KNOT",
+                    "ROCK DOVE(de visita)": "ROCK DOVE",
+                    "SAND MARTIN(de visita)": "SAND MARTIN",
+                    "SCARLET TANAGER(de visita)": "SCARLET TANAGER",
+                    "SHORT BILLED DOWITCHER(de visita)": "SHORT BILLED DOWITCHER",
+                    "SNOWY EGRET(de visita)": "SNOWY EGRET",
+                    "SORA(de visita)": "SORA",
+                    "WHIMBREL(de visita)": "WHIMBREL"
+                };
+
+                var indiceMaximo = resultado.indexOf(Math.max(...resultado));
+                var clasePredicha = indiceMaximo !== -1 ? Object.values(clasesAves)[indiceMaximo] : "Clase no encontrada";
                 document.getElementById("resultado").innerHTML = clasePredicha;
+
+
             }
 
             setTimeout(predecir, 150);
